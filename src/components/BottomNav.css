@@ -1,0 +1,107 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 430px;
+  z-index: 100;
+  padding: 0 8px 8px;
+}
+
+.bottom-nav-inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  background: rgba(13, 10, 20, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: 8px 4px 10px;
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.nav-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 8px;
+  position: relative;
+  transition: all 200ms ease;
+  min-width: 52px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-icon {
+  font-size: 1.35rem;
+  transition: transform 200ms ease;
+  filter: grayscale(0.5) opacity(0.6);
+}
+
+.nav-tab.active .nav-icon {
+  filter: none;
+  transform: scale(1.15);
+}
+
+.nav-label {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-faint);
+  transition: color 200ms ease;
+  letter-spacing: 0.02em;
+}
+
+.nav-tab.active .nav-label {
+  color: var(--color-primary);
+}
+
+.nav-indicator {
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--gradient-primary);
+  animation: fadeInScale 250ms ease;
+}
+
+/* Center tab (Memories) */
+.nav-tab-center {
+  margin-top: -18px;
+}
+
+.nav-center-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(255, 107, 157, 0.4);
+  transition: all 250ms ease;
+  border: 3px solid var(--bg-base);
+}
+
+.nav-tab-center:hover .nav-center-icon,
+.nav-tab-center.active .nav-center-icon {
+  transform: scale(1.1);
+  box-shadow: 0 4px 30px rgba(255, 107, 157, 0.6);
+}
+
+.nav-center-emoji {
+  font-size: 1.4rem;
+  filter: brightness(1.2);
+}
+
+.nav-tab-center .nav-label {
+  margin-top: 2px;
+}

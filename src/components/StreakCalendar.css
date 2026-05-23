@@ -1,0 +1,87 @@
+.streak-calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.streak-grid-wrapper {
+  display: flex;
+  gap: 6px;
+}
+
+.streak-day-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.streak-day-label {
+  width: 16px;
+  height: 14px;
+  font-size: 0.6rem;
+  color: var(--text-faint);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: var(--font-body);
+}
+
+.streak-grid {
+  display: flex;
+  gap: 3px;
+  flex: 1;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.streak-grid::-webkit-scrollbar { display: none; }
+
+.streak-week {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.streak-cell {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  transition: all 200ms ease;
+  cursor: default;
+}
+
+.streak-cell:hover {
+  transform: scale(1.4);
+  z-index: 2;
+}
+
+.streak-level-0 {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.streak-level-1 {
+  background: rgba(255, 107, 157, 0.35);
+  box-shadow: 0 0 4px rgba(255, 107, 157, 0.2);
+}
+
+.streak-level-2 {
+  background: linear-gradient(135deg, #FF6B9D, #C44DFF);
+  box-shadow: 0 0 6px rgba(255, 107, 157, 0.4);
+}
+
+.streak-legend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.streak-legend-label {
+  font-size: 0.65rem;
+  color: var(--text-faint);
+  font-family: var(--font-body);
+}
+
+.streak-legend-cell {
+  width: 12px;
+  height: 12px;
+}

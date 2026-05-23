@@ -1,0 +1,115 @@
+.challenge-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.challenge-pack-card {
+  cursor: pointer;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pack-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+}
+
+.pack-emoji { font-size: 2rem; margin-top: 4px; }
+.pack-title {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.pack-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+/* Pack Detail */
+.pack-detail-header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.pack-detail-emoji {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Challenge List */
+.challenge-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.challenge-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  transition: all 250ms ease;
+}
+
+.challenge-item.next {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 20px rgba(255, 107, 157, 0.15);
+}
+
+.challenge-item.done {
+  opacity: 0.6;
+}
+
+.challenge-day-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.challenge-item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.challenge-item-content h4 { font-size: 0.9rem; }
+.line-through { text-decoration: line-through; opacity: 0.7; }
+
+.challenge-complete-btn {
+  flex-shrink: 0;
+  padding: 8px 14px !important;
+}
+
+/* Complete banner */
+.pack-complete-banner {
+  text-align: center;
+  padding: 32px 20px;
+  background: linear-gradient(135deg, rgba(77,255,160,0.1), rgba(107,223,255,0.08));
+  border: 1px solid rgba(77,255,160,0.2);
+  border-radius: var(--radius-lg);
+}
+.pack-complete-banner h3 { margin: 12px 0 6px; }
